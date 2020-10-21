@@ -1,0 +1,19 @@
+vcl 4.0;
+
+backend node {
+    .host = "127.0.0.1";
+    .port = "8000";
+}
+
+acl purge {
+    "localhost";
+    {%- if varnish.origins -%}
+    {%- for origin in varnish.origins %}
+    "{{ origin }}";
+    {%- endfor %}
+    {%- endif %}
+}
+
+sub vcl_recv {
+
+}

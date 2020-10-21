@@ -1,0 +1,4 @@
+varnish:
+  origins:
+    - google.com
+    - microsoft.com
