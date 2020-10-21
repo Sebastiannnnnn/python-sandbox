@@ -1,4 +1,5 @@
 varnish:
+  some_other_value: hello world
   origins:
     - google.com
     - microsoft.com
