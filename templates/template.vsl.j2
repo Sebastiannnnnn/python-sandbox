@@ -7,10 +7,10 @@ backend node {
 
 acl purge {
     "localhost";
-    {%- if varnish.origins -%}
-    {%- for origin in varnish.origins %}
+    {%- if varnish.origins %}
+    {% for origin in varnish.origins %}
     "{{ origin }}";
-    {%- endfor %}
+    {% endfor %}
     {%- endif %}
 }
 
